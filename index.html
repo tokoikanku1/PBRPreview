@@ -22,6 +22,22 @@
         .spinner { width: 50px; height: 50px; border: 5px solid #333; border-top: 5px solid #4ecca3; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
+        /* --- Watermark --- */
+        .watermark {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+            font-weight: 500;
+            letter-spacing: 1px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 50;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+        }
+
         /* --- UI Panel (Right Side) --- */
         #control-panel {
             position: absolute; top: 0; right: 0;
@@ -105,6 +121,9 @@
     <div id="drop-overlay">
         <h1>Lepaskan File Disini</h1>
     </div>
+
+    <!-- Watermark -->
+    <div class="watermark">by Christopher Yuwono</div>
 
     <!-- Control Panel -->
     <div id="control-panel">
